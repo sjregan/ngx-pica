@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/digitalascetic/ngx-pica",
+  "dest": "../../../dist/sjregan/ngx-pica",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

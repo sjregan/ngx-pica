@@ -1,11 +1,11 @@
-# @digitalascetic/ngx-pica
-> @digitalascetic/ngx-pica is an Angular (LTS) module to resize images files in browser using <a href="https://github.com/nodeca/pica">pica - high quality image resize in browser</a>.
+# @sjregan/ngx-pica
+> @sjregan/ngx-pica is an Angular (LTS) module to resize images files in browser using <a href="https://github.com/nodeca/pica">pica - high quality image resize in browser</a>.
 
-[![latest](https://img.shields.io/npm/v/%40digitalascetic/ngx-pica/latest.svg)](https://www.npmjs.com/package/@digitalascetic/ngx-pica) 
+[![latest](https://img.shields.io/npm/v/%40sjregan/ngx-pica/latest.svg)](https://www.npmjs.com/package/@sjregan/ngx-pica) 
 
 ## Important
 
-This is a fork of [@digitalascetic/ngx-pica](@digitalascetic/ngx-pica) with a crucial difference: all uses of `File`
+This is a fork of [@digitalascetic/ngx-pica](https://github.com/digitalascetic/ngx-pica) with a crucial difference: all uses of `File`
 have been replaced with `Blob`, and `FileReader` is no longer used.
 
 This allows the library to be used in projects that also use `cordova-plugin-file`, or use libraries that depend on
@@ -13,22 +13,22 @@ This allows the library to be used in projects that also use `cordova-plugin-fil
 
 **Angular v5**
 
-@digitalascetic/ngx-pica Angular 5 compatibility is under version **1.1.8**  
+@sjregan/ngx-pica Angular 5 compatibility is under version **1.1.8**  
 ```bash
-$ npm install @digitalascetic/ngx-pica@1.1.8 --save
+$ npm install @sjregan/ngx-pica@1.1.8 --save
 ```
 
 ## Install
 1. Add `ngx-pica` module as dependency to your project.
 ```bash
-$ npm install pica exifr @digitalascetic/ngx-pica --save
+$ npm install pica exifr @sjregan/ngx-pica --save
 ```
 2. Include `NgxPicaModule` into your main AppModule or in module where you will use it.
 ```
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxPicaModule } from '@digitalascetic/ngx-pica';
+import { NgxPicaModule } from '@sjregan/ngx-pica';
 
 @NgModule({
   imports: [
@@ -140,7 +140,7 @@ This example demonstrates use with `File` and has not been updated to use with `
 
 ```ts
 import { Component, EventEmitter } from '@angular/core';
-import { NgxPicaService } from '@digitalascetic/ngx-pica';
+import { NgxPicaService } from '@sjregan/ngx-pica';
 
 @Component({
   selector: 'app-home',

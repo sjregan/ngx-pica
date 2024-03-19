@@ -21,11 +21,11 @@
       "dom"
     ],
     "paths": {
-      "@digitalascetic/ngx-pica": [
-        "dist/digitalascetic/ngx-pica"
+      "@sjregan/ngx-pica": [
+        "dist/sjregan/ngx-pica"
       ],
-      "@digitalascetic/ngx-pica/*": [
-        "dist/digitalascetic/ngx-pica/*"
+      "@sjregan/ngx-pica/*": [
+        "dist/sjregan/ngx-pica/*"
       ]
     }
   }

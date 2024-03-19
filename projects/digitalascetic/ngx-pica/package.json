@@ -1,5 +1,5 @@
 {
-  "name": "@digitalascetic/ngx-pica",
+  "name": "@sjregan/ngx-pica",
   "version": "14.1.0",
   "description": "Angular (LTS) module to resize images files in browser",
   "license": "MIT",
@@ -20,5 +20,5 @@
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "repository": "https://github.com/digitalascetic/ngx-pica"
+  "repository": "https://github.com/sjregan/ngx-pica"
 }

@@ -4,6 +4,15 @@
 [![latest](https://img.shields.io/npm/v/%40digitalascetic/ngx-pica/latest.svg)](https://www.npmjs.com/package/@digitalascetic/ngx-pica) 
 
 ## Important
+
+This is a fork of [@digitalascetic/ngx-pica](@digitalascetic/ngx-pica) with a crucial difference: all uses of `File`
+have been replaced with `Blob`, and `FileReader` is no longer used.
+
+This allows the library to be used in projects that also use `cordova-plugin-file`, or use libraries that depend on
+`cordova-plugin-file`, or to be used within Angular projects with `zone.js`.
+
+**Angular v5**
+
 @digitalascetic/ngx-pica Angular 5 compatibility is under version **1.1.8**  
 ```bash
 $ npm install @digitalascetic/ngx-pica@1.1.8 --save
@@ -39,7 +48,7 @@ export class AppModule {}
 * **NgxPicaImageService** - Supplementary services to help you work with images
 
 ## NgxPicaService Methods
-#### `.resizeImages(files: File[], width: number, height: number, options?: NgxPicaResizeOptionsInterface): Observable<File>`
+#### `.resizeImages(files: Blob[], width: number, height: number, options?: NgxPicaResizeOptionsInterface): Observable<Blob>`
 This method resize an array of images doing it sequentially to optimize CPU and memory use.
 * **files:[]** - Array of images to resize
 * **width** - Width to be resized (px)
@@ -56,10 +65,10 @@ If something goes wrong the Observable receive an error.
 
 All errors are wrapped by NgxPicaErrorInterface.
 
-### `.resizeImage(file: File, width: number, height: number, options?: NgxPicaResizeOptionsInterface): Observable<File>`
+### `.resizeImage(file: Blob, width: number, height: number, options?: NgxPicaResizeOptionsInterface): Observable<Blob>`
 Same as above but only takes one file instead of an array of files.
 
-### `.compressImages(files: File[], sizeInMB: number, options?: NgxPicaCompressOptionsInterface): Observable<File>`
+### `.compressImages(files: Blob[], sizeInMB: number, options?: NgxPicaCompressOptionsInterface): Observable<Blob>`
 This method compress an array of images doing it sequentially to optimize CPU and memory use.
 * **files:[]** - Array of images to resize
 * **sizeInMB** - File size in MegaBytes
@@ -72,11 +81,11 @@ If something goes wrong the Observable receive an error.
 
 All errors are wrapped by NgxPicaErrorInterface.
 
-### `.compressImage(file: File, sizeInMB: number, options?: NgxPicaCompressOptionsInterface): Observable<File>`
+### `.compressImage(file: Blob, sizeInMB: number, options?: NgxPicaCompressOptionsInterface): Observable<Blob>`
 Same as above but only takes one file instead of an array of files.
 
 ## NgxPicaImageService Methods
-#### `.isImage(file: File): boolean`
+#### `.isImage(file: Blob): boolean`
 This method check if a file is an image or not
 
 ## Data Structures
@@ -120,11 +129,13 @@ export enum NgxPicaErrorType {
 
 export interface NgxPicaErrorInterface {
     err: NgxPicaErrorType;
-    file?: File;
+    file?: Blob;
 }
 ```
 
-## Example
+## Outdated Example
+
+This example demonstrates use with `File` and has not been updated to use with `Blob`.
 
 
 ```ts

@@ -1,5 +1,5 @@
 export enum NgxPicaErrorType {
-    NO_FILES_RECEIVED = 'NO_FILES_RECEIVED',
+    NO_BLOBS_RECEIVED = 'NO_BLOBS_RECEIVED',
     CANVAS_CONTEXT_IDENTIFIER_NOT_SUPPORTED = 'CANVAS_CONTEXT_IDENTIFIER_NOT_SUPPORTED',
     NOT_BE_ABLE_TO_COMPRESS_ENOUGH = 'NOT_BE_ABLE_TO_COMPRESS_ENOUGH',
     READ_ERROR = 'IMAGE_COULD_NOT_BE_LOADED'
@@ -7,5 +7,5 @@ export enum NgxPicaErrorType {
 
 export interface NgxPicaErrorInterface {
     err: NgxPicaErrorType;
-    file?: File;
+    blob?: Blob;
 }

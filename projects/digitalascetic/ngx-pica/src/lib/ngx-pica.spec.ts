@@ -26,7 +26,7 @@ describe('ngx-pica tests', () => {
 
   it('should be resized to 32x32', (done) => {
 
-    const file = new File([blob], 'test');
+    const file = new Blob([blob]);
 
     ngxPica.resizeImage(file, 32, 32)
       .pipe(catchError(err => {
@@ -56,7 +56,7 @@ describe('ngx-pica tests', () => {
     const files = [];
 
     for (let i = 0; i < 5; i++) {
-      files.push(new File([blob], 'test' + i));
+      files.push(new Blob([blob]));
     }
 
     forkJoin([
@@ -96,7 +96,7 @@ describe('ngx-pica tests', () => {
       .then(res => res.blob())
       .then(blobImg => {
 
-        const file = new File([blobImg], 'test');
+        const file = new Blob([blobImg]);
         console.log(file.size);
         ngxPica.compressImage(file, 2)
           .pipe(catchError(err => {
